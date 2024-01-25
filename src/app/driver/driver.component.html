@@ -1,4 +1,4 @@
-<div [ngClass]="klasi()">
+<div  [ngClass]="klasi()" [ngStyle]="boi()">
     <div class = "course-title">
         {{reden+'. '+vozac.name}}
     </div>
@@ -10,7 +10,10 @@
     <div class = "course-description">
         {{vozac.team}}
     </div>
-
+       
+    <div >
+        <p>Lessons Count (red if >400): {{vozac.lessonsCount}}</p>   
+    </div>
     <div>
         Points:{{vozac.points}}
     </div>

@@ -17,6 +17,7 @@ export class AppComponent {
   
   
   vozaci = DRIVERS;//cekor1(28.12)
+font: any;
 
 
   appKlik(suzi:Driver){

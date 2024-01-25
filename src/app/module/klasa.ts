@@ -6,4 +6,5 @@ export interface Driver{
     category:string;
     points:number;
     description:string;
+    lessonsCount:number;
 }

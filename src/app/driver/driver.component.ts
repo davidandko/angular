@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Driver } from '../module/klasa';
 import { NgIf,CommonModule } from '@angular/common';
-
+import { NgStyle } from '@angular/common';
 @Component({
   selector: 'app-driver',
   standalone: true,
@@ -20,6 +20,9 @@ export class DriverComponent implements OnInit{
   @Input()
   reden:Number | undefined;
 
+  @Input()
+  ngStyle: { [klass: string]: any; } | undefined
+  
   @Output()
   cuci = new EventEmitter<Driver>;
 
@@ -27,6 +30,9 @@ export class DriverComponent implements OnInit{
 
   klasi(){
     return {'poz':this.vozac.category=="PRO",'course-card':true};
+  }
+  boi(){
+    return {'boja':this.vozac.lessonsCount>400,'course-lessons':true};
   }
   klik(){
     var link=this.vozac.iconUrl;
